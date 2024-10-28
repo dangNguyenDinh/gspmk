@@ -1,0 +1,259 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+button {
+    background-color: #4CAF50; /* Màu nền */
+    border: none; /* Không có đường viền */
+    color: white; /* Màu chữ */
+    padding: 3px 5px; /* Khoảng cách bên trong */
+    text-align: center; /* Canh giữa văn bản */
+    text-decoration: none; /* Không có gạch chân */
+    display: inline-block; /* Hiển thị inline */
+    font-size: 16px; /* Kích thước chữ */
+    margin: 4px 2px; /* Khoảng cách bên ngoài */
+    cursor: pointer; /* Hiển thị con trỏ chuột khi di chuột lên */
+    border-radius: 4px; /* Bo tròn các góc */
+    transition: background-color 0.3s; /* Hiệu ứng chuyển tiếp cho màu nền */
+}
+
+button:hover {
+    background-color: #45a049; /* Màu nền khi di chuột lên button */
+}
+
+
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: grid;
+    grid-template-areas:
+        "header header header"
+        "online product cart"
+        "team product cart";
+    grid-template-columns: 0.7fr 1.2fr 1.3fr;
+    grid-template-rows: 0.5fr 1fr 1fr;
+    height: 100vh;
+    gap: 10px;
+    padding: 10px;
+}
+
+/* Khu 1 - Header */
+#header {
+    grid-area: header;
+    background-color: #f0f0f0;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Khu 2 - Online List */
+#online-list {
+    grid-area: online;
+    background-color: #e0e7ff;
+    padding: 20px;
+	overflow-y: auto;
+}
+
+/* Khu 3 - Current Team */
+#team-area {
+    grid-area: team;
+    background-color: #fef3c7;
+    padding: 20px;
+}
+
+/* Khu 4 - Product List */
+#product-list {
+    grid-area: product;
+    background-color: #d1fae5;
+    padding: 20px;
+	overflow-y: auto;
+}
+
+/* Khu 5 - Shopping Cart */
+#shopping-cart {
+    grid-area: cart;
+    background-color: #ffe4e6;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+/*khu 1*/
+/* CSS cho bảng */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    margin-top: 20px;
+}
+
+/* CSS cho tiêu đề cột */
+th {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    text-align: left;
+    border-bottom: 2px solid #ddd;
+}
+
+/* CSS cho dòng dữ liệu */
+.online-row {
+    border-bottom: 1px solid #ddd;
+}
+
+.online-row:hover {
+    background-color: #f1f1f1;
+}
+
+/* CSS cho cột username */
+.online-username {
+    padding: 10px;
+    color: #333;
+}
+
+/* CSS cho cột hành động */
+.online-action {
+    padding: 10px;
+    text-align: center;
+}
+
+/* CSS cho nút mời */
+.invite-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.invite-button:hover {
+    background-color: #45a049;
+}
+
+/* CSS cho dòng trống khi không có người online */
+.online-empty-row {
+    background-color: #ffcccc;
+}
+
+.online-empty-cell {
+    text-align: center;
+    padding: 10px;
+    font-style: italic;
+    color: #888;
+}
+
+/*khu 3*/
+/* CSS cho bảng sản phẩm */
+.product-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #f3f3f3;
+    font-family: Arial, sans-serif;
+    margin-top: 15px;
+    border: 1px solid #ccc;
+}
+
+.product-table th {
+    background-color: #007bff;
+    color: white;
+    padding: 8px;
+    text-align: left;
+    font-weight: normal;
+}
+
+.product-row {
+    border-bottom: 1px solid #ddd;
+}
+
+.product-row:hover {
+    background-color: #e9ecef;
+}
+
+.product-id, .product-name, .product-action {
+    padding: 10px;
+    text-align: left;
+    color: #333;
+}
+
+/* CSS cho nút "Details" */
+.details-button {
+    background-color: #17a2b8;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.details-button:hover {
+    background-color: #138496;
+}
+
+/* CSS cho nút "Add to cart" */
+.add-cart-button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.add-cart-button:hover {
+    background-color: #218838;
+}
+
+/* CSS cho bảng hiển thị sản phẩm */
+.product-display-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #f9f9f9;
+    font-family: Arial, sans-serif;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+}
+
+.product-display-table th {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    text-align: left;
+    font-weight: normal;
+}
+
+.product-display-row {
+    border-bottom: 1px solid #ddd;
+}
+
+.product-display-row:hover {
+    background-color: #f1f1f1;
+}
+
+.product-display-id, .product-display-name, .product-display-price, .product-display-action {
+    padding: 10px;
+    color: #333;
+    text-align: left;
+}
+
+/* CSS cho nút "Xóa khỏi giỏ hàng" */
+.remove-cart-button {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.remove-cart-button:hover {
+    background-color: #c82333;
+}

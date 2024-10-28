@@ -1,0 +1,140 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #e0f7fa; /* Màu nền xanh nhạt */
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr; /* Chia thành 2 cột: bên trái 2 phần, bên phải 1 phần */
+    gap: 20px; /* Khoảng cách giữa các cột */
+}
+
+.left {
+    display: flex;
+    flex-direction: column; /* Xếp dọc cho phần bên trái */
+}
+
+.right {
+    display: flex;
+    flex-direction: column; /* Xếp dọc cho phần bên phải */
+}
+
+#message {
+    border: 1px solid #00796b; /* Viền màu xanh đậm */
+    background-color: #ffffff; /* Màu nền trắng cho phần chat */
+    height: 200px;
+    overflow-y: auto;
+    margin-bottom: 10px; /* Khoảng cách dưới phần chat */
+    padding: 10px; /* Padding cho nội dung trong phần chat */
+    border-radius: 5px; /* Bo góc cho phần chat */
+}
+
+#chat-box {
+    max-height: 180px; /* Chiều cao tối đa cho khung chat */
+    overflow-y: auto; /* Cuộn dọc nếu nội dung quá dài */
+}
+
+#chat-input {
+    width: 70%; /* Chiều rộng ô nhập văn bản */
+    padding: 5px;
+    border: 1px solid #00796b; /* Viền ô nhập văn bản */
+    border-radius: 5px; /* Bo góc cho ô nhập văn bản */
+}
+
+button {
+    padding: 5px 10px; /* Padding cho nút */
+    cursor: pointer; /* Con trỏ khi hover qua nút */
+    background-color: #00796b; /* Màu nền nút */
+    color: white; /* Màu chữ nút */
+    border: none; /* Bỏ viền cho nút */
+    border-radius: 5px; /* Bo góc cho nút */
+}
+
+button:hover {
+    background-color: #004d40; /* Màu nền khi hover */
+}
+
+.cart-table {
+    width: 100%;
+    border-collapse: collapse; /* Gộp viền bảng */
+    margin-top: 20px; /* Khoảng cách trên bảng */
+    background-color: #ffffff; /* Màu nền trắng cho bảng */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ cho bảng */
+    border-radius: 5px; /* Bo góc cho bảng */
+}
+
+.cart-table th, .cart-table td {
+    border: 1px solid #00796b; /* Viền màu xanh đậm */
+    padding: 10px; /* Padding cho ô */
+    text-align: center; /* Căn giữa nội dung trong ô */
+}
+
+.cart-table th {
+    background-color: #00796b; /* Màu nền cho tiêu đề bảng */
+    color: white; /* Màu chữ cho tiêu đề */
+}
+
+.cart-table tr:hover {
+    background-color: #e0f7fa; /* Màu nền khi hover qua hàng */
+}
+
+.product-image {
+    width: 50px; /* Chiều rộng hình ảnh sản phẩm */
+    height: 50px; /* Chiều cao hình ảnh sản phẩm */
+    border-radius: 5px; /* Bo góc cho hình ảnh */
+}
+
+.total-row {
+    font-weight: bold; /* Đậm chữ cho tổng đơn giá */
+    background-color: #c8e6c9; /* Màu nền nhạt cho hàng tổng */
+}
+
+.header {
+    background-color: #00796b; /* Màu nền cho phần tiêu đề */
+    color: white; /* Màu chữ trắng */
+    padding: 20px; /* Khoảng cách bên trong */
+    border-radius: 5px; /* Bo góc cho phần tiêu đề */
+    text-align: center; /* Căn giữa nội dung */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Đổ bóng nhẹ cho phần tiêu đề */
+    margin-bottom: 20px; /* Khoảng cách dưới phần tiêu đề */
+}
+
+.header h1 {
+    margin: 0; /* Bỏ margin cho h1 */
+    font-size: 2em; /* Kích thước chữ lớn hơn cho tiêu đề */
+}
+
+.header h2 {
+    margin: 5px 0; /* Khoảng cách giữa các h2 */
+    font-size: 1.2em; /* Kích thước chữ cho h2 */
+}
+button {
+    background-color: #4CAF50; /* Màu nền */
+    border: none; /* Không có đường viền */
+    color: white; /* Màu chữ */
+    padding: 5px 5px; /* Khoảng cách bên trong */
+    text-align: center; /* Canh giữa văn bản */
+    text-decoration: none; /* Không có gạch chân */
+    display: inline-block; /* Hiển thị inline */
+    font-size: 16px; /* Kích thước chữ */
+    margin: 4px 2px; /* Khoảng cách bên ngoài */
+    cursor: pointer; /* Hiển thị con trỏ chuột khi di chuột lên */
+    border-radius: 4px; /* Bo tròn các góc */
+    transition: background-color 0.3s; /* Hiệu ứng chuyển tiếp cho màu nền */
+}
+
+.chat-message {
+    background-color: #e0f7fa; /* Màu nền nhạt cho tin nhắn */
+    border-radius: 10px; /* Bo góc cho tin nhắn */
+    padding: 10px; /* Padding cho nội dung tin nhắn */
+    margin: 5px 0; /* Khoảng cách giữa các tin nhắn */
+    max-width: 80%; /* Chiều rộng tối đa cho tin nhắn */
+    word-wrap: break-word; /* Ngắt từ khi cần thiết */
+    font-size: 1em; /* Kích thước chữ */
+}
+
+.chat-message:nth-child(odd) {
+    background-color: #b2ebf2; /* Màu nền khác cho tin nhắn lẻ */
+}
